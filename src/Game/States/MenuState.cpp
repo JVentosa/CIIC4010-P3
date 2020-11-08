@@ -1,7 +1,9 @@
 #include "MenuState.h"
 
 MenuState::MenuState() {
-	startButton = new Button(ofGetWidth()/2, ofGetHeight()/2, 64, 50, "Start");
+	startButton = new Button(0, 0, ofGetWidth(), ofGetHeight(), "Click Anywhere to Start");
+	// new Button(ofGetWidth()/2, ofGetHeight()/2, 64, 50, "Start");
+	 img1.load("images/title.jpg");
 }
 void MenuState::tick() {
 	startButton->tick();
@@ -12,7 +14,11 @@ void MenuState::tick() {
 	}
 }
 void MenuState::render() {
-	ofSetBackgroundColor(230, 230, 250);
+	ofSetColor(256);
+	img1.draw(0,0,ofGetWidth(), ofGetHeight());
+	ofSetColor(0);
+	ofDrawBitmapString("e-> picks up ingredients ", ofGetWidth() / 2, ofGetHeight() / 2 + 15);
+	ofDrawBitmapString("s-> serve clients ", ofGetWidth() / 2, ofGetHeight() / 2 + 30);
 	startButton->render();
 }
 

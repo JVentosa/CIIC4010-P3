@@ -17,7 +17,14 @@ Restaurant::Restaurant() {
     entityManager = new EntityManager();
     ofImage chefPlayerImage;
     chefPlayerImage.load("images/chef.png");
-    this->player = new Player(0, 600, 64, 64, chefPlayerImage, entityManager);    
+    this->player = new Player(0, 600, 64, 64, chefPlayerImage, entityManager); 
+    gordonRamsay.load("images/GordonRamsay.png");
+    plant.load("images/plant.png");
+    tableDec.load("images/table.png");
+    gordonRamsay.cropFrom(gordonRamsay, 277, 35, 250, 394);
+    tableDec.cropFrom(tableDec, 36, 29, 146, 161);
+    plant.cropFrom(plant, 269, 45, 318, 767);
+
     initItems();
     initCounters();
     initClients();
@@ -106,11 +113,15 @@ void Restaurant::generateClient(){
 }
 void Restaurant::render() {
     floor.draw(0,0, ofGetWidth(), ofGetHeight());
+    gordonRamsay.draw(ofGetWidth()- 100, 50, 100,100);
+    tableDec.draw(ofGetWidth()/2 - 215, ofGetHeight()/2 - 200, 200, 200);
+    plant.draw(ofGetWidth()-65, ofGetHeight()/2, 85,85);
     player->render();
     entityManager->render();
     ofSetColor(0, 100, 0);
     ofDrawBitmapString("Money: " + to_string(money), ofGetWidth()/2, 10);
     ofSetColor(256, 256, 256);
+
 }
 void Restaurant::serveClient(){
     if(entityManager->firstClient!= nullptr){

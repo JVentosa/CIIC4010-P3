@@ -21,6 +21,7 @@ class Restaurant {
         Restaurant();
         Player* getPlayer();
         void setPlayer(Player *player);
+        ofImage gordonRamsay, plant, tableDec, tableDecs;
         Item* cheese;
         Item* lettuce;
         Item* tomato;
