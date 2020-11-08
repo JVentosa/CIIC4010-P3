@@ -31,8 +31,8 @@ void EntityManager::addEntity(Entity *e){
     entities.push_back(e);
 }
 
-void EntityManager::addClient(Client* c){
-    if(firstClient == nullptr){
+void EntityManager::addClient(Client* c){ // si el cliente es el primero, fine, si no 
+    if(firstClient == nullptr){             // es el primer cliente, moves position +72;
         firstClient = c;
     }else{
         Client* tempClient = firstClient;

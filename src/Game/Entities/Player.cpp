@@ -32,7 +32,7 @@ void Player::tick(){
 }
 
 void Player::render(){
-    BaseCounter* ac = getActiveCounter();
+    BaseCounter* ac = getActiveCounter(); // ?
     if(ac != nullptr){
         ac->showItem();
     }

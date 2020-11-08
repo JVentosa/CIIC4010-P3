@@ -24,7 +24,7 @@ Restaurant::Restaurant() {
     generateClient();
 
 }
-void Restaurant::initItems(){
+void Restaurant::initItems(){ // Initializes the items
     ofImage burgerSpriteSheet, cheeseImg, lettuceImg, tomatoImg, burgerImg, botBreadImg, topBreadImg, plateImg;
     burgerSpriteSheet.load("images/burger.png");
     topBreadImg.cropFrom(burgerSpriteSheet, 25, 16, 112, 43); // top bun
@@ -62,7 +62,7 @@ void Restaurant::initCounters(){
     entityManager->addEntity(new BaseCounter(counterWidth*5, yOffset -10, counterWidth, 113, tomato, tomatoCounterImg));
     entityManager->addEntity(new BaseCounter(counterWidth*6, yOffset-32, counterWidth, 133, botBread, breadCounterImg));
     entityManager->addEntity(new BaseCounter(counterWidth*7, yOffset-32, counterWidth, 133, topBread, breadCounterImg));
-
+    // QUE HACE ESTOOOO
 }
 void Restaurant::initClients(){
     ofImage temp;
