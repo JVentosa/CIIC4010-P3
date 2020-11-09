@@ -20,6 +20,9 @@ void ofApp::update(){
 				currentState = menuState;
 			}else if(currentState->getNextState() == "Game"){
 				currentState = gameState;
+				background.load("background_music.mp3");
+				background.setLoop(true);
+				background.play();
 			}
 			currentState->reset();
 		}
