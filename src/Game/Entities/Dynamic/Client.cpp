@@ -8,16 +8,43 @@ Client::~Client(){
 }
 void Client::render(){
     burger->render();
-    ofSetColor (255,255,255);
+    ofSetColor (red,green,blue);
+    setAngryColor();
     sprite.draw(x, y, width, height);
     // ofDrawRectangle(getBounds());
     if(nextClient != nullptr){
         nextClient->render();
     }
 }
+void Client::setAngryColor(){
+     switch (patience)
+    {
+    case 1500:
+        red += 75;
+        green -= 75; 
+        blue -= 75;
+        break;
+    case 1000:
+        red += 50;
+         green -= 50; 
+        blue -= 50;
+        break;
+    case 500:
+        red += 50;
+         green -= 50; 
+        blue -= 50;
+        break;
+    case 150:
+        red += 80;
+         green -= 80; 
+        blue -= 80;
+        break;
+    }
+}
 
 void Client::tick(){
     patience--;
+   
     burger->setY(y);
     if(patience == 0){
         isLeaving = true;
