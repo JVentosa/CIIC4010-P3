@@ -16,6 +16,7 @@ void Burger::addIngredient(Item *item) {
 }
 
 void Burger::render(){
+    ofSetColor(256,256,256);
     int counter = 1;
     for (Item* ingredient:ingredients){
         ingredient->sprite.draw(x,y-(counter * 10),width,height); // ESTO ANADE LOS INGREDIENTES AL BURGER?

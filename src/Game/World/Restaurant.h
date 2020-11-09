@@ -39,6 +39,8 @@ class Restaurant {
         void tick();
         void render();
         void keyPressed(int key);
+        EntityManager* getem();
+        
 };
 
 
