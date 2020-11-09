@@ -13,6 +13,7 @@ void EntityManager::tick(){
 void EntityManager::removeLeavingClients(){
     Client* tempClient = nullptr;
     while(firstClient != nullptr && firstClient->isLeaving){
+        angryLclients++;
         tempClient = firstClient->nextClient;
         delete firstClient;
         firstClient = tempClient;
@@ -45,3 +46,11 @@ void EntityManager::addClient(Client* c){ // si el cliente es el primero, fine, 
         tempClient->nextClient = c;
     }
 }
+
+int EntityManager::getAngryLClients(){
+    return angryLclients;
+}
+
+// Client* EntityManager::getClient(){
+//     return firstClient;
+// }

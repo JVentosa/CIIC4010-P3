@@ -8,6 +8,7 @@ void ofApp::setup(){
 	menuState = new MenuState();
 	gameState = new GameState();
 	winState = new WinState();
+	loserState = new LoseState();
 	// Initial State
 	currentState = menuState;
 }
@@ -27,7 +28,10 @@ void ofApp::update(){
 			}else if(currentState->getNextState() == "WinState"){
 				background.stop();
 				currentState = winState;
-			}else 
+			}else if(currentState->getNextState() == "Loser"){
+				background.stop();
+				currentState = loserState;
+			}else
 			currentState->reset();
 		}
 	}

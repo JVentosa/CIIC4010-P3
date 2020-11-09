@@ -10,6 +10,10 @@ void GameState::tick() {
 		setNextState("WinState");
 		setFinished(true);
 		
+	}else if(restaurant->getem()->getAngryLClients() == 10){
+		// set angry clients to 0;
+		setNextState("Loser");
+		setFinished(true);
 	}
 	restaurant->tick();
 }

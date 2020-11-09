@@ -6,9 +6,9 @@ class Client: public Entity{
         Burger* burger;
         int originalPatience;
         int patience=2000;
-        int red = 255;
         int green = 255;
         int blue = 255;
+        int angryLCostumers = 0;
     public:
         Client(int, int, int, int, ofImage, Burger*);
         ~Client();

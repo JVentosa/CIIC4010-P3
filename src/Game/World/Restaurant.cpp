@@ -140,3 +140,6 @@ void Restaurant::keyPressed(int key) {
         serveClient();
     }
 }
+EntityManager* Restaurant::getem(){
+    return this->entityManager;
+}
