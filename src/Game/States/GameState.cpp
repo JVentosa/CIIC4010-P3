@@ -4,6 +4,13 @@ GameState::GameState() {
     this->restaurant = new Restaurant();
 }
 void GameState::tick() {
+	
+	if(restaurant->getMoney() == 100){
+		restaurant->setMoney(0);
+		setNextState("WinState");
+		setFinished(true);
+		
+	}
 	restaurant->tick();
 }
 void GameState::render() {

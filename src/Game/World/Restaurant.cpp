@@ -99,7 +99,13 @@ void Restaurant::tick() {
     entityManager->tick();
 
 }
+int Restaurant::getMoney(){
+    return money;
+}
 
+void Restaurant::setMoney(int money){
+    this->money = money;
+}
 
 void Restaurant::generateClient(){
     Burger* b = new Burger(72, 100, 50, 25);

@@ -7,6 +7,7 @@ void ofApp::setup(){
 	//States
 	menuState = new MenuState();
 	gameState = new GameState();
+	winState = new WinState();
 	// Initial State
 	currentState = menuState;
 }
@@ -23,7 +24,10 @@ void ofApp::update(){
 				background.load("background_music.mp3");
 				background.setLoop(true);
 				background.play();
-			}
+			}else if(currentState->getNextState() == "WinState"){
+				background.stop();
+				currentState = winState;
+			}else 
 			currentState->reset();
 		}
 	}

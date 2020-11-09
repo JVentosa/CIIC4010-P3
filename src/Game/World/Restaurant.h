@@ -21,6 +21,8 @@ class Restaurant {
         Restaurant();
         Player* getPlayer();
         void setPlayer(Player *player);
+        int getMoney();
+        void setMoney(int money);
         ofImage gordonRamsay, plant, tableDec, tableDecs;
         Item* cheese;
         Item* lettuce;
