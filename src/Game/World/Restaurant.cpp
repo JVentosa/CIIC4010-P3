@@ -71,7 +71,7 @@ void Restaurant::initCounters(){
     entityManager->addEntity(new BaseCounter(counterWidth*7, yOffset-32, counterWidth, 133, topBread, breadCounterImg));
     // QUE HACE ESTOOOO
 }
-void Restaurant::initClients(){
+void Restaurant::initClients(){// creates the clients images
     ofImage temp;
     temp.load("images/People/Car_Designer3Female.png");
     people.push_back(temp);
