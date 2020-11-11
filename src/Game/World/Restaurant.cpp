@@ -21,6 +21,9 @@ Restaurant::Restaurant() {
     gordonRamsay.load("images/GordonRamsay.png");
     plant.load("images/plant.png");
     tableDec.load("images/table.png");
+    hell.load("images/hellkitch.png");
+    gordlogo.load("images/gordonlogo.jpg");
+    piano.load("images/piano.png");
     gordonRamsay.cropFrom(gordonRamsay, 277, 35, 250, 394);
     tableDec.cropFrom(tableDec, 36, 29, 146, 161);
     plant.cropFrom(plant, 269, 45, 318, 767);
@@ -73,21 +76,23 @@ void Restaurant::initCounters(){
 }
 void Restaurant::initClients(){// creates the clients images
     ofImage temp;
-    temp.load("images/People/Car_Designer3Female.png");
+    temp.load("images/People/megaman.png");
     people.push_back(temp);
-    temp.load("images/People/Freedom_Fighter2Male.png");
+    temp.load("images/People/LONK.png");
     people.push_back(temp);
-    temp.load("images/People/Hipster.png");
+    temp.load("images/People/Luigi.png");
     people.push_back(temp);
-    temp.load("images/People/Lawyer2Male.png");
+    temp.load("images/People/MAGICMAN.png");
     people.push_back(temp);
-    temp.load("images/People/Mad_Scientist3Female.png");
+    temp.load("images/People/TOAST.png");
     people.push_back(temp);
-    temp.load("images/People/Programmer2Male.png");
+    temp.load("images/People/FatDinosaur.png");
     people.push_back(temp);
-    temp.load("images/People/Songwriter3Male.png");
+    temp.load("images/People/crash.png");
     people.push_back(temp);
-    temp.load("images/People/Weather_Reporter2Female.png");
+    temp.load("images/People/deadpool.png");
+    people.push_back(temp);
+    temp.load("images/People/TOASTV2.png");
     people.push_back(temp);
 }
 void Restaurant::tick() {
@@ -115,13 +120,15 @@ void Restaurant::generateClient(){
     b->addIngredient(tomato);
     b->addIngredient(lettuce);
     b->addIngredient(topBread);
-    entityManager->addClient(new Client(0, 50, 64, 72,people[ofRandom(8)], b));
+    entityManager->addClient(new Client(0, 50, 64, 72,people[ofRandom(9)], b));
 }
 void Restaurant::render() {
     floor.draw(0,0, ofGetWidth(), ofGetHeight());
-    gordonRamsay.draw(ofGetWidth()- 100, 50, 100,100);
+    gordonRamsay.draw(400, ofGetHeight()-100, 100,100);
     tableDec.draw(ofGetWidth()/2 - 215, ofGetHeight()/2 - 200, 200, 200);
-    plant.draw(ofGetWidth()-65, ofGetHeight()/2, 85,85);
+    //plant.draw(ofGetWidth()-65, ofGetHeight()/2, 85,85);
+    hell.draw(400, 0, 150, 150);
+    piano.draw(ofGetWidth() - 175, 50, 250, 250);
     player->render();
     entityManager->render();
     ofSetColor(0, 100, 0);

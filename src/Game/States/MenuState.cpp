@@ -19,6 +19,7 @@ void MenuState::render() {
 	ofSetColor(0);
 	ofDrawBitmapString("e-> picks up ingredients ", ofGetWidth() / 2, ofGetHeight() / 2 + 15);
 	ofDrawBitmapString("s-> serve clients ", ofGetWidth() / 2, ofGetHeight() / 2 + 30);
+	ofDrawBitmapString("u-> undo last ingredient ", ofGetWidth() / 2, ofGetHeight() / 2 + 45);
 	startButton->render();
 }
 

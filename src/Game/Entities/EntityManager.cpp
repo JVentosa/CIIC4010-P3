@@ -1,7 +1,7 @@
 #include "EntityManager.h"
 
 void EntityManager::tick(){
-    for(int i=0; i<entities.size(); i++){
+    for(unsigned int i=0; i<entities.size(); i++){
         entities[0]->tick();
     }
     if(firstClient != nullptr){
@@ -20,7 +20,7 @@ void EntityManager::removeLeavingClients(){
     }
 }
 void EntityManager::render(){
-    for(int i=0; i<entities.size(); i++){
+    for(unsigned int i=0; i<entities.size(); i++){
         entities[i]->render();
     }
     if(firstClient != nullptr){

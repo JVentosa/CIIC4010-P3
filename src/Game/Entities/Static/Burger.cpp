@@ -17,6 +17,15 @@ void Burger::addIngredient(Item *item) {
     ingredients.push_back(item);
 }
 
+void Burger::removeIngredient(Item *item){
+    if(ingredients.size() > 0){
+        if(quantity > 0){
+        quantity--;
+        ingredients.pop_back(); 
+        }
+    }
+}
+
 void Burger::render(){
     ofSetColor(256,256,256);
     int counter = 1;
@@ -33,8 +42,8 @@ void Burger::clear(){
 bool Burger::equals(Burger* b){
     bool equals = false;
     if(this->quantity == b->getQuantity()){
-        for (int i = 0; i < this->ingredients.size(); i++) {
-            for (int j = 0; j < b->getIngredients().size(); j++) {
+        for (unsigned int i = 0; i < this->ingredients.size(); i++) {
+            for (unsigned int j = 0; j < b->getIngredients().size(); j++) {
                 if (this->getIngredients().at(i) == b->getIngredients().at(j)){
                     equals = true;
                     break;

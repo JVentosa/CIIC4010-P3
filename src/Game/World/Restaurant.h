@@ -23,7 +23,7 @@ class Restaurant {
         void setPlayer(Player *player);
         int getMoney();
         void setMoney(int money);
-        ofImage gordonRamsay, plant, tableDec, tableDecs;
+        ofImage gordonRamsay, plant, tableDec, tableDecs, hell, gordlogo, piano;
         Item* cheese;
         Item* lettuce;
         Item* tomato;
