@@ -12,6 +12,7 @@ class Burger {
 private:
     int x,y,width,height;
  vector<Item*> ingredients;
+  int quantity = 0;
 
 public:
     Burger(int, int, int, int);
@@ -21,6 +22,10 @@ public:
     void setY(int y){
         this->y = y;
     }
+    vector<Item*> getIngredients();
+    int getQuantity();
+
+    bool equals(Burger* b);
 };
 
 

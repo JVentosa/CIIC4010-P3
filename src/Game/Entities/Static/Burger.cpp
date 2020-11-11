@@ -12,6 +12,8 @@ Burger::Burger(int x, int y, int width, int height){
 }
 
 void Burger::addIngredient(Item *item) {
+    
+  quantity++;
     ingredients.push_back(item);
 }
 
@@ -26,4 +28,28 @@ void Burger::render(){
 
 void Burger::clear(){
     ingredients.empty();
+}
+
+bool Burger::equals(Burger* b){
+    bool equals = false;
+    if(this->quantity == b->getQuantity()){
+        for (int i = 0; i < this->ingredients.size(); i++) {
+            for (int j = 0; j < b->getIngredients().size(); j++) {
+                if (this->getIngredients().at(i) == b->getIngredients().at(j)){
+                    equals = true;
+                    break;
+                }
+                else
+                    equals = false;
+            }
+        }
+    }
+    return equals;
+}
+
+vector<Item*> Burger::getIngredients(){
+    return ingredients;
+}
+int Burger::getQuantity(){
+    return quantity;
 }
