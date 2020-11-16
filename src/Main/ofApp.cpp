@@ -31,7 +31,7 @@ void ofApp::update(){
 			}else if(currentState->getNextState() == "Loser"){
 				background.stop();
 				currentState = loserState;
-			}else
+			}
 			currentState->reset();
 		}
 	}

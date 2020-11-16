@@ -10,6 +10,7 @@ public:
 	Client* firstClient;
 	void tick();
 	int getAngryLClients();
+	void setAngryLClients(int angryLclients);
 	void render();
 	void addEntity(Entity *e);
 	void addClient(Client *c);

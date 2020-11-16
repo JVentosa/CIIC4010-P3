@@ -19,6 +19,7 @@ void EntityManager::removeLeavingClients(){
         firstClient = tempClient;
     }
 }
+
 void EntityManager::render(){
     for(unsigned int i=0; i<entities.size(); i++){
         entities[i]->render();
@@ -51,6 +52,7 @@ int EntityManager::getAngryLClients(){
     return angryLclients;
 }
 
-// Client* EntityManager::getClient(){
-//     return firstClient;
-// }
+void EntityManager::setAngryLClients(int angryLclients){
+    this->angryLclients = angryLclients;
+}
+
