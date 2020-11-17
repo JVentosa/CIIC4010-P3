@@ -3,7 +3,7 @@
 MenuState::MenuState() {
 	startButton = new Button(0, 0, ofGetWidth(), ofGetHeight(), "Click Anywhere to Start");
 	// new Button(ofGetWidth()/2, ofGetHeight()/2, 64, 50, "Start");
-	 img1.load("images/title.jpg");
+	 img1.load("images/GordonRamsaySC.jpg");
 }
 void MenuState::tick() {
 	startButton->tick();
