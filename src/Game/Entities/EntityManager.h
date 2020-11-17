@@ -15,6 +15,7 @@ public:
 	void addEntity(Entity *e);
 	void addClient(Client *c);
 	void removeLeavingClients();
+	void removeAllClients();
 	// Client* getClient();
 	std::vector<Entity*> entities;
 

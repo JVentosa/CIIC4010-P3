@@ -47,6 +47,14 @@ void EntityManager::addClient(Client* c){ // si el cliente es el primero, fine, 
         tempClient->nextClient = c;
     }
 }
+void EntityManager::removeAllClients(){
+    Client *tempclient = nullptr;
+    while(firstClient != nullptr){
+        tempclient = firstClient->nextClient;
+        delete firstClient;
+        firstClient = tempclient;
+    }
+}
 
 int EntityManager::getAngryLClients(){
     return angryLclients;

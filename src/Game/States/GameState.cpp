@@ -7,12 +7,16 @@ void GameState::tick() {
 	
 	if(restaurant->getMoney() == 100){
 		restaurant->setMoney(0);
+		restaurant->getPlayer()->setX(600);
+		restaurant->getem()->removeAllClients();
 		setNextState("WinState");
 		setFinished(true);
 		
 	}else if(restaurant->getem()->getAngryLClients() == 10){
 		// set angry clients to 0;
 		restaurant->getem()->setAngryLClients(0);
+		restaurant->getPlayer()->setX(600);
+		restaurant->getem()->removeAllClients();
 		setNextState("Loser");
 		setFinished(true);
 	}
