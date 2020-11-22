@@ -17,4 +17,5 @@ class BaseCounter: public Entity {
         void showItem();
 
 };
+
 #endif //APGAMEENGINE_BASECOUNTER_H

@@ -4,16 +4,18 @@ GameState::GameState() {
     this->restaurant = new Restaurant();
 }
 void GameState::tick() {
-	
-	if(restaurant->getMoney() == 100){
+
+	if (restaurant->getMoney() == 100){
 		restaurant->setMoney(0);
 		restaurant->getPlayer()->setX(600);
 		restaurant->getem()->removeAllClients();
+		restaurant->getem()->setAngryLClients(0);
 		setNextState("WinState");
 		setFinished(true);
-		
-	}else if(restaurant->getem()->getAngryLClients() == 10){
+	}
+	else if (restaurant->getem()->getAngryLClients() == 10){
 		// set angry clients to 0;
+		restaurant->setMoney(0);
 		restaurant->getem()->setAngryLClients(0);
 		restaurant->getPlayer()->setX(600);
 		restaurant->getem()->removeAllClients();

@@ -48,10 +48,20 @@ void Player::render(){
 void Player::keyPressed(int key){
     if(key == 'e'){
         BaseCounter* ac = getActiveCounter();
-        if(ac != nullptr){
-            Item* item = ac->getItem();
-            if(item != nullptr){
-                burger->addIngredient(item);
+        if (ac != nullptr){
+            Item *item = ac->getItem();
+            if (item != nullptr)
+            {
+                if (item->name == "patty")
+                {
+                    StoveCounter *stove = dynamic_cast<StoveCounter *>(ac);
+                    if (stove->isCooked())
+                    {
+                        burger->addIngredient(item);
+                    }
+                }
+                else
+                    burger->addIngredient(item);
             }
         }
     }
@@ -69,7 +79,7 @@ BaseCounter* Player::getActiveCounter(){
     for(Entity* e:entityManager->entities){
         BaseCounter* c = dynamic_cast<BaseCounter*>(e);
         if(x + e->getWidth()/2 >= e->getX() && x +e->getWidth()/2 <e->getX() + e->getWidth()){
-            return c;
+                return c;
         }
     }
     return nullptr;
