@@ -134,6 +134,7 @@ void Restaurant::generateClient(){
        
     }
     b->addIngredient(topBread);
+    // inspector would be people[10]
     entityManager->addClient(new Client(0, 50, 64, 72, people[ofRandom(9)], b));
 }
 void Restaurant::render() {
@@ -153,7 +154,6 @@ void Restaurant::render() {
 void Restaurant::serveClient(){
     if(entityManager->firstClient!= nullptr){
         money += entityManager->firstClient->serve(player->getBurger());
-        
     }
 }
 void Restaurant::keyPressed(int key) {
