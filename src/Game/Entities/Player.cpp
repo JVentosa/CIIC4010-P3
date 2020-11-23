@@ -50,18 +50,8 @@ void Player::keyPressed(int key){
         BaseCounter* ac = getActiveCounter();
         if (ac != nullptr){
             Item *item = ac->getItem();
-            if (item != nullptr)
-            {
-                if (item->name == "patty")
-                {
-                    StoveCounter *stove = dynamic_cast<StoveCounter *>(ac);
-                    if (stove->isCooked())
-                    {
-                        burger->addIngredient(item);
-                    }
-                }
-                else
-                    burger->addIngredient(item);
+            if (item != nullptr){
+            burger->addIngredient(item);
             }
         }
     }
