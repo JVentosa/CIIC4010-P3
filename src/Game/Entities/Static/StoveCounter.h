@@ -13,12 +13,12 @@ class StoveCounter: public BaseCounter{
         Item *item;
         int counter;
         bool cook = false;
-
+        bool startcountng = false;
     public:
-        StoveCounter(int x, int y, int width, int height, Item* item, ofImage sprite);
-        Item* getItem();
+        StoveCounter(int x, int y, int width, int height, Item *item, ofImage sprite);
+        virtual Item *getItem();
         void tick();
-        void showItem();
+        virtual void showItem();
         bool isCooked();
 };
 #endif //APGAMEENGINE_BASECOUNTER_H

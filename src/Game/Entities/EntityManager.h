@@ -2,6 +2,7 @@
 
 #include "Entity.h"
 #include "Client.h"
+#include "Inspector.h"
 
 class EntityManager {
 private:
@@ -13,7 +14,7 @@ public:
 	void setAngryLClients(int angryLclients);
 	void render();
 	void addEntity(Entity *e);
-	void addClient(Client *c);
+	void addClient(Client *c); // Me deja hacerlo con client porque inspecor hereda de client??
 	void removeLeavingClients();
 	void removeAllClients();
 	// Client* getClient();
