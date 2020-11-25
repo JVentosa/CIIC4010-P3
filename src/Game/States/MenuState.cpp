@@ -16,7 +16,7 @@ void MenuState::tick() {
 void MenuState::render() {
 	ofSetColor(256);
 	img1.draw(0,0,ofGetWidth(), ofGetHeight());
-	ofSetColor(0);
+	ofSetColor(255);
 	ofDrawBitmapString("e-> picks up ingredients ", ofGetWidth() / 2, ofGetHeight() / 2 + 15);
 	ofDrawBitmapString("s-> serve clients ", ofGetWidth() / 2, ofGetHeight() / 2 + 30);
 	ofDrawBitmapString("u-> undo last ingredient ", ofGetWidth() / 2, ofGetHeight() / 2 + 45);

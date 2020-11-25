@@ -114,11 +114,11 @@ void Restaurant::setMoney(int money){
 }
 
 void Restaurant::generateClient(){
-    int randomloop = ofRandom(1, 5);
+    int ingredientstotal = 3;
     int randomPeople = ofRandom(11);
     Burger* b = new Burger(72, 100, 50, 25);
     b->addIngredient(botBread);
-    for(int i = 0; i < randomloop; i++){
+    for(int i = 0; i < ingredientstotal; i++){
         int random = ofRandom(4);
         switch(random){
             case 0:
