@@ -51,6 +51,10 @@ void Client::tick(){
     }
 }
 
+int Client::getPatience(){
+    return patience;
+}
+
 int Client::serve(Burger* burger){
     if(nextClient == nullptr){
         return 0;

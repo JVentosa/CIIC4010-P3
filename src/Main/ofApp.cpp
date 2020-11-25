@@ -23,8 +23,8 @@ void ofApp::update(){
 			}else if(currentState->getNextState() == "Game"){
 				currentState = gameState;
 				background.load("background_music.mp3");
-				// background.setLoop(true);
-				// background.play();
+				background.setLoop(true);
+				background.play();
 			}else if(currentState->getNextState() == "WinState"){
 				background.stop();
 				currentState = winState;

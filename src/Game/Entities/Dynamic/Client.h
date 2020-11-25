@@ -17,9 +17,7 @@ class Client: public Entity{
         virtual void setAngryColor();
         virtual void render();
         virtual int serve(Burger*);
-        virtual int getPatience(){
-            return patience;
-        }
+        virtual int getPatience();
         Client* nextClient=nullptr;
         bool isLeaving=false;
 
