@@ -122,7 +122,7 @@ void Restaurant::setMoney(int money){
 
 void Restaurant::generateClient(){
     int ingredientstotal = 3;
-    int randomPeople = ofRandom(11);
+    int randomPeople = ofRandom(10);
     Burger* b = new Burger(72, 100, 50, 25);
     b->addIngredient(botBread);
     for(int i = 0; i < ingredientstotal; i++){
@@ -144,13 +144,11 @@ void Restaurant::generateClient(){
        
     }
     b->addIngredient(topBread);
-    //   entityManager->addClient(new Client(0, 50, 64, 72, people[ofRandom(9)], b));
     if (randomPeople < 8){
-        // inspector would be people[10]
         entityManager->addClient(new Client(0, 50, 64, 72, people[ofRandom(9)], b));
     }
     else
-        entityManager->addClient(new Inspector(0, 50, 64, 72, people[9], b));
+        entityManager->addClient(new Inspector(0, 50, 100, 100, people[9], b));
 }
 void Restaurant::render() {
     floor.draw(0,0, ofGetWidth(), ofGetHeight());

@@ -16,10 +16,11 @@ void MenuState::tick() {
 void MenuState::render() {
 	ofSetColor(256);
 	img1.draw(0,0,ofGetWidth(), ofGetHeight());
-	ofSetColor(255);
-	ofDrawBitmapString("e-> picks up ingredients ", ofGetWidth() / 2, ofGetHeight() / 2 + 15);
-	ofDrawBitmapString("s-> serve clients ", ofGetWidth() / 2, ofGetHeight() / 2 + 30);
-	ofDrawBitmapString("u-> undo last ingredient ", ofGetWidth() / 2, ofGetHeight() / 2 + 45);
+	ofSetColor(255,0,0);
+	ofDrawBitmapString("e-> picks up ingredients ", ofGetWidth() / 2, ofGetHeight() / 2 + 30);
+	ofDrawBitmapString("s-> serve clients ", ofGetWidth() / 2, ofGetHeight() / 2 + 45);
+	ofDrawBitmapString("u-> undo last ingredient ", ofGetWidth() / 2, ofGetHeight() / 2 + 60);
+	ofDrawBitmapString("The inspector is GordonRamsay", ofGetWidth() / 2, ofGetHeight() / 2 + 75);
 	startButton->render();
 }
 

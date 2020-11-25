@@ -26,7 +26,7 @@ void StoveCounter::showItem()
             item->sprite.draw(x + width / 2 - 25, y - 30, 50, 30);
         }
     } else {
-        ofSetColor(219,48,130);
+        ofSetColor(255,127,127);
            item->sprite.draw(x + width / 2 - 25, y - 30, 50, 30);
     }
 }
