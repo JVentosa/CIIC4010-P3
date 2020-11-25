@@ -9,6 +9,7 @@ private:
 int angryLclients = 0;
 public:
 	Client* firstClient;
+	Inspector* inspect;
 	void tick();
 	int getAngryLClients();
 	void setAngryLClients(int angryLclients);

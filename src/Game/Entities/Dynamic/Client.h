@@ -12,11 +12,14 @@ class Client: public Entity{
         int angryLCostumers = 0;
     public:
         Client(int, int, int, int, ofImage, Burger*);
-        ~Client();
-        void tick();
-        void setAngryColor();
-        void render();
-        int serve(Burger*);
+        virtual ~Client();
+        virtual void tick();
+        virtual void setAngryColor();
+        virtual void render();
+        virtual int serve(Burger*);
+        virtual int getPatience(){
+            return patience;
+        }
         Client* nextClient=nullptr;
         bool isLeaving=false;
 

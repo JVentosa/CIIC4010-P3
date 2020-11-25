@@ -5,6 +5,7 @@ GameState::GameState() {
 }
 void GameState::tick() {
 
+
 	if (restaurant->getMoney() == 100){
 		restaurant->setMoney(0);
 		restaurant->getPlayer()->setX(600);

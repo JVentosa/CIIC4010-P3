@@ -15,7 +15,14 @@ void EntityManager::removeLeavingClients(){
     while(firstClient != nullptr && firstClient->isLeaving){
         angryLclients++;
         tempClient = firstClient->nextClient;
-        delete firstClient;
+        if(inspect != nullptr && inspect->isLeaving){
+            delete firstClient;
+            inspect = nullptr;
+        }
+        else{
+            delete firstClient;
+
+        }
         firstClient = tempClient;
     }
 }

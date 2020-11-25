@@ -41,6 +41,8 @@ class Restaurant {
         void render();
         void keyPressed(int key);
         EntityManager* getem();
+
+        int cliencount = 0;
         
 };
 
